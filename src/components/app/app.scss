@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ebebeb;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__forms {
+    display: flex;
+
+
+    form:first-child {
+      margin-right: 40px;
+    }
+
+    input {
+      width: 100%;
+      padding: 1rem;
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      border: 1px solid #bfbfc6;
+      border-radius: 10px;
+    }
+
+    button {
+      width: 100%;
+      padding: 1rem;
+      font-size: 1.5rem;
+      background-color: #4e4e4e;
+      color: #fff;
+      border: 0;
+      border-radius: 10px;
+    }
+  }
+}
