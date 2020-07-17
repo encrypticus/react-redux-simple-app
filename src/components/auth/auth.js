@@ -1,19 +1,19 @@
 import React from 'react';
+import {setAuthName, setAuthPassword} from '../../redux/actions/auth';
 
 const Auth = (props) => {
   const {
     name,
     password,
-    setAuthName,
-    setAuthPassword
+    dispatch
   } = props;
 
   const onChangeName = (event) => {
-    setAuthName(event.target.value);
+    dispatch(setAuthName(event.target.value));
   };
 
   const onChangePassword = (event) => {
-    setAuthPassword(event.target.value);
+    dispatch(setAuthPassword(event.target.value));
   };
 
   return (

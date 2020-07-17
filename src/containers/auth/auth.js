@@ -1,20 +1,13 @@
 import React from 'react';
-import {connect} from 'react-redux';
-import {setAuthName, setAuthPassword} from '../../redux/actions/auth';
+import {useSelector, useDispatch} from 'react-redux';
 import Auth from '../../components/auth';
 
-const AuthContainer = (props) => {
-  return <Auth {...props}/>
+const AuthContainer = () => {
+  const dispatch = useDispatch();
+  const name = useSelector(state => state.authReducer.name);
+  const password = useSelector(state => state.authReducer.password);
+
+  return <Auth name={name} password={password} dispatch={dispatch}/>
 };
 
-const mapStateToProps = (state) => ({
-  name: state.authReducer.name,
-  password: state.authReducer.password
-});
-
-const mapDispatchToProps = {
-  setAuthName,
-  setAuthPassword
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(AuthContainer);
+export default AuthContainer;

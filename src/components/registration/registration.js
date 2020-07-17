@@ -1,19 +1,19 @@
 import React from 'react';
+import {setRegistrationName, setRegistrationPassword} from '../../redux/actions/registration';
 
 const Registration = (props) => {
   const {
     name,
     password,
-    setRegistrationName,
-    setRegistrationPassword
+    dispatch
   } = props;
 
   const onChangeName = (event) => {
-    setRegistrationName(event.target.value);
+    dispatch(setRegistrationName(event.target.value));
   };
 
   const onChangePassword = (event) => {
-    setRegistrationPassword(event.target.value);
+    dispatch(setRegistrationPassword(event.target.value));
   };
 
   return (
