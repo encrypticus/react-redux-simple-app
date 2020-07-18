@@ -5,7 +5,8 @@ const Registration = (props) => {
     name,
     password,
     setRegistrationName,
-    setRegistrationPassword
+    setRegistrationPassword,
+    setUser
   } = props;
 
   const onChangeName = (event) => {
@@ -14,6 +15,11 @@ const Registration = (props) => {
 
   const onChangePassword = (event) => {
     setRegistrationPassword(event.target.value);
+  };
+
+  const onFetchData = (event) => {
+    event.preventDefault();
+    setUser();
   };
 
   return (
@@ -35,7 +41,8 @@ const Registration = (props) => {
         />
       </div>
       <div>
-        <button>Sign up</button>
+        <button style={{marginBottom: '10px'}}>Sign up</button>
+        <button onClick={onFetchData}>Fetch data</button>
       </div>
     </form>
   );
