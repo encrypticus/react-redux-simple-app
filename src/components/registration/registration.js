@@ -6,7 +6,7 @@ const Registration = (props) => {
     password,
     setRegistrationName,
     setRegistrationPassword,
-    setUser
+    fetchUserData
   } = props;
 
   const onChangeName = (event) => {
@@ -19,7 +19,7 @@ const Registration = (props) => {
 
   const onFetchData = (event) => {
     event.preventDefault();
-    setUser();
+    fetchUserData();
   };
 
   return (

@@ -5,7 +5,7 @@ export const setUser = (user) => ({
   payload: user,
 });
 
-export const fetchUserData = (dispatch) => () => {
+export const fetchUserData = () => (dispatch) => {
   fetch('https://jsonplaceholder.typicode.com/todos/1')
     .then((response) => response.json())
     .then((data) => {

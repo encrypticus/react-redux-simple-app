@@ -20,10 +20,10 @@ const mapStateToProps = (state) => ({
   user: state.userReducer
 });
 
-const mapDispatchToProps = (dispatch) => ({
-  setRegistrationName: (name) => dispatch(setRegistrationName(name)),
-  setRegistrationPassword: (password) => dispatch(setRegistrationPassword(password)),
-  setUser: fetchUserData(dispatch)
-});
+const mapDispatchToProps = {
+  setRegistrationName,
+  setRegistrationPassword,
+  fetchUserData
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(RegistrationContainer);
