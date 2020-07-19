@@ -4,22 +4,23 @@ const Registration = (props) => {
   const {
     name,
     password,
-    setRegistrationName,
-    setRegistrationPassword,
-    fetchUserData
+    setName,
+    setPassword,
+    fetchUserData,
+    dispatch
   } = props;
 
   const onChangeName = (event) => {
-    setRegistrationName(event.target.value);
+    dispatch(setName(event.target.value));
   };
 
   const onChangePassword = (event) => {
-    setRegistrationPassword(event.target.value);
+    dispatch(setPassword(event.target.value));
   };
 
   const onFetchData = (event) => {
     event.preventDefault();
-    fetchUserData();
+    dispatch(fetchUserData());
   };
 
   return (
