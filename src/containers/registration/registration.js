@@ -18,6 +18,7 @@ const RegistrationContainer = () => {
   return <Registration
     name={name}
     password={password}
+    user={user}
     dispatch={dispatch}
     fetchUserData={fetchUserData}
     setName={setRegistrationName}

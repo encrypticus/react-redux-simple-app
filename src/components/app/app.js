@@ -5,7 +5,7 @@ import Auth from '../../containers/auth/';
 import Registration from '../../containers/registration';
 import Console from '../../containers/console';
 
-const App = (props) => {
+const App = () => {
   return (
     <Provider store={store}>
       <div className="app">

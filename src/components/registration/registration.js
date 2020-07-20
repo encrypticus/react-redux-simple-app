@@ -4,6 +4,7 @@ const Registration = (props) => {
   const {
     name,
     password,
+    user,
     setName,
     setPassword,
     fetchUserData,
