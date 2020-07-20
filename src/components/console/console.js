@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import ContextProvider from '../../context/context';
 
 const Console = (props) => {
   const {
@@ -7,6 +8,9 @@ const Console = (props) => {
     authPassword,
     regPassword
   } = props;
+
+  const message = useContext(ContextProvider);
+  alert(message);
 
   return (
     <div className="console">
